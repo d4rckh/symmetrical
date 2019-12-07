@@ -1,9 +1,10 @@
 var express = require('express');
 var passport = require('passport');
 var Strategy = require('passport-local').Strategy;
-var db = require('./db');
+var db = require('./db/index');
+var ads = require('./db/ads')
 
-
+console.log(ads.getAds())
 // Configure the local strategy for use by Passport.
 //
 // The local strategy require a `verify` function which receives the credentials
@@ -60,6 +61,8 @@ app.use(require('express-session')({ secret: 'keyboard cat', resave: false, save
 app.use(passport.initialize());
 app.use(passport.session());
 
+app.use(express.static('public'))
+
 // Define routes.
 app.get('/',
   function(req, res) {
@@ -86,7 +89,19 @@ app.get('/logout',
 app.get('/profile',
   require('connect-ensure-login').ensureLoggedIn(),
   function(req, res){
-    res.render('profile', { user: req.user });
+    res.render('profile', { user: req.user, ads: ads.getAds() });
   });
+
+app.get('/c/:adid', (req, res) => {
+  var s = ads.getAds().filter(ad => ad.id === req.params.adid)[0].website
+  console.log(s)
+  var prefix = 'http://';
+  if (s.substr(0, prefix.length) !== prefix)
+  {
+      s = prefix + s;
+  }
+  ads.d.get('ads').find({id: req.params.adid}).assign({clicks: ads.d.get('ads').find({id: req.params.adid}).value().clicks + 1}).write()
+  res.redirect(s)
+})
 
 app.listen(3000);

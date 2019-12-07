@@ -1,4 +1,4 @@
-<p>
+<!--<p>
 ID: <%= user.id %><br/>
 Username: <%= user.username %><br/>
 Name: <%= user.displayName %><br/>
@@ -6,4 +6,475 @@ Name: <%= user.displayName %><br/>
 Email: <%= user.emails[0].value %><br/>
 <% } %>
 </p>
-<a href="/logout">Log out</a>
+<table>
+    <tr>
+        <th>name</th>
+        <th>website</th>
+        <th>clicks</th>
+        <th>id</th>
+    </tr>
+    <% ads.forEach((ad) => { %>
+            <tr>
+                <td><%= ad.name %></td>
+                <td><%= ad.website %></td>
+                <td><%= ad.clicks %></td>
+                <td><%= ad.id %></td>
+            </tr>
+        <% }) %>
+</table>
+<a href="/logout">Log out</a>-->
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- Mirrored from preview.webpixels.io/purpose-website-ui-kit-v2.0.0/pages/account/listing-orders.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 15 Mar 2019 20:07:28 GMT -->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Purpose is a unique and beautiful collection of UI elements that are all flexible and modular. A complete and customizable solution to building the website of your dreams.">
+  <meta name="author" content="Webpixels">
+  <title>Purpose Website UI Kit - Purpose is a unique and beautiful collection of UI elements that are all flexible and modular. A complete and customizable solution to building the website of your dreams.</title>
+  <!-- Favicon -->
+  <link rel="icon" href="/assets/img/brand/favicon.png" type="image/png">
+  <!-- Font Awesome 5 -->
+  <link rel="stylesheet" href="/assets/libs/%40fortawesome/fontawesome-pro/css/all.min.css"><!-- Purpose CSS -->
+  <link rel="stylesheet" href="/assets/css/purpose.css" id="stylesheet">
+</head>
+
+<body>
+  <header class="header header-transparent" id="header-main">
+    <!-- Main navbar -->
+    <nav class="navbar navbar-main navbar-expand-lg navbar-dark bg-dark" id="navbar-main">
+      <div class="container px-lg-0">
+        <!-- Logo -->
+        <a class="navbar-brand mr-lg-5" href="../../index-2.html">
+          <img alt="Image placeholder" src="../../assets/img/brand/white.png" id="navbar-logo" style="height: 50px;">
+        </a>
+        <!-- Navbar collapse trigger -->
+        <button class="navbar-toggler pr-0" type="button" data-toggle="collapse" data-target="#navbar-main-collapse" aria-controls="navbar-main-collapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Navbar nav -->
+        <div class="collapse navbar-collapse" id="navbar-main-collapse">
+          <ul class="navbar-nav align-items-lg-center">
+            <!-- Home - Overview  -->
+            <!-- Pages menu -->
+          </ul>
+          <ul class="navbar-nav align-items-lg-center ml-lg-auto">
+            <li class="nav-item dropdown dropdown-animate" data-toggle="hover">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Docs</a>
+              <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg dropdown-menu-arrow p-0">
+                <ul class="list-group list-group-flush">
+                  <li>
+                    <a href="../../docs/index.html" class="list-group-item list-group-item-action" role="button">
+                      <div class="media d-flex align-items-center">
+                        <!-- SVG icon -->
+                        <figure style="width: 50px;">
+                          <img alt="Image placeholder" src="../../assets/img/icons/essential/detailed/DOC_File.svg" class="svg-inject img-fluid" style="height: 50px;">
+                        </figure>
+                        <!-- Media body -->
+                        <div class="media-body ml-3">
+                          <h6 class="mb-1">YOUR USERNAME</h6>
+                          <p class="mb-0">Hello!</p>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+                <div class="dropdown-menu-links rounded-bottom delimiter-top p-4">
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <a href="../../docs/getting-started/installation.html" class="dropdown-item">Log Out</a>
+                      <a href="../../docs/getting-started/file-structure.html" class="dropdown-item">View your ads</a>
+                    </div>
+                    <div class="col-sm-6">
+                      <a href="../../docs/getting-started/plugins.html" class="dropdown-item">Join our discord server</a>
+                      <a href="../../docs/components/index.html" class="dropdown-item">ToS</a>
+                      <a href="../../docs/plugins/animate.html" class="dropdown-item">FaQ</a>
+                      <a href="../../docs/support.html" class="dropdown-item">Quick Support</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- Omnisearch -->
+  <div id="omnisearch" class="omnisearch">
+    <div class="container">
+      <!-- Search form -->
+      <form class="omnisearch-form">
+        <div class="form-group">
+          <div class="input-group input-group-merge input-group-flush">
+            <div class="input-group-prepend">
+              <span class="input-group-text"><i class="far fa-search"></i></span>
+            </div>
+            <input type="text" class="form-control" placeholder="Type and hit enter ...">
+          </div>
+        </div>
+      </form>
+      <div class="omnisearch-suggestions">
+        <h6 class="heading">Search Suggestions</h6>
+        <div class="row">
+          <div class="col-sm-6">
+            <ul class="list-unstyled mb-0">
+              <li>
+                <a class="list-link" href="#">
+                  <i class="far fa-search"></i>
+                  <span>macbook pro</span> in Laptops
+                </a>
+              </li>
+              <li>
+                <a class="list-link" href="#">
+                  <i class="far fa-search"></i>
+                  <span>iphone 8</span> in Smartphones
+                </a>
+              </li>
+              <li>
+                <a class="list-link" href="#">
+                  <i class="far fa-search"></i>
+                  <span>macbook pro</span> in Laptops
+                </a>
+              </li>
+              <li>
+                <a class="list-link" href="#">
+                  <i class="far fa-search"></i>
+                  <span>beats pro solo 3</span> in Headphones
+                </a>
+              </li>
+              <li>
+                <a class="list-link" href="#">
+                  <i class="far fa-search"></i>
+                  <span>smasung galaxy 10</span> in Phones
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="main-content">
+    <!-- Header (account) -->
+    <section class="header-account-page bg-primary d-flex align-items-end" data-offset-top="#header-main">
+      <!-- Header container -->
+      <div class="container pt-4 pt-lg-0">
+        <div class="row">
+          <div class=" col-lg-12">
+            <!-- Salute + Small stats -->
+            <div class="row align-items-center mb-4">
+              <div class="col-md-5 mb-4 mb-md-0">
+                <span class="h2 mb-0 text-white d-block">Welcome, USERNAME</span>
+                <span class="text-white">Have a nice day!</span>
+              </div>
+              <div class="col-auto flex-fill d-none d-xl-block">
+                <ul class="list-inline row justify-content-lg-end mb-0">
+                  <li class="list-inline-item col-sm-4 col-md-auto px-3 my-2 mx-0">
+                    <span class="badge badge-dot text-white">
+                      <i class="bg-success"></i>Ads
+                    </span>
+                    <a class="d-sm-block h5 text-white font-weight-bold pl-2" href="#">
+                      <%= ads.length %>
+                    </a>
+                  </li>
+                  <li class="list-inline-item col-sm-4 col-md-auto px-3 my-2 mx-0">
+                    <span class="badge badge-dot text-white">
+                      <i class="bg-warning"></i>Total Clicks
+                    </span>
+                    <a class="d-sm-block h5 text-white font-weight-bold pl-2" href="#">
+                      10K
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- Account navigation -->
+            <div class="d-flex">
+              <div class="btn-group btn-group-nav shadow ml-auto" role="group" aria-label="Basic example">
+                <div class="btn-group" role="group">
+                  <button id="btn-group-settings" type="button" class="btn btn-neutral btn-icon" data-toggle="dropdown" data-offset="0,8" aria-haspopup="true" aria-expanded="false">
+                    <span class="btn-inner--icon"><i class="far fa-sliders-h"></i></span>
+                    <span class="btn-inner--text d-none d-sm-inline-block">Account</span>
+                  </button>
+                  <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow" aria-labelledby="btn-group-settings">
+                    <span class="dropdown-header">Profile</span>
+                    <a class="dropdown-item" href="account-profile-public.html">Public profile</a>
+                    <span class="dropdown-header">Account</span>
+                    <a class="dropdown-item" href="account-profile.html">Profile</a>
+                    <a class="dropdown-item" href="account-settings.html">Settings</a>
+                    <a class="dropdown-item" href="account-billing.html">Billing</a>
+                    <a class="dropdown-item" href="account-notifications.html">Notifications</a>
+                  </div>
+                </div>
+                <div class="btn-group" role="group">
+                  <button id="btn-group-boards" type="button" class="btn btn-neutral btn-icon" data-toggle="dropdown" data-offset="0,8" aria-haspopup="true" aria-expanded="false">
+                    <span class="btn-inner--icon"><i class="far fa-chart-line"></i></span>
+                    <span class="btn-inner--text d-none d-sm-inline-block">Board</span>
+                  </button>
+                  <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow" aria-labelledby="btn-group-boards">
+                    <a class="dropdown-item" href="board-overview.html">Overview</a>
+                    <a class="dropdown-item" href="board-projects.html">Projects</a>
+                    <a class="dropdown-item" href="board-tasks.html">Tasks</a>
+                    <a class="dropdown-item" href="board-connections.html">Connections</a>
+                  </div>
+                </div>
+                <div class="btn-group" role="group">
+                  <button id="btn-group-listing" type="button" class="btn btn-neutral btn-icon rounded-right" data-toggle="dropdown" data-offset="0,8" aria-haspopup="true" aria-expanded="false">
+                    <span class="btn-inner--icon"><i class="far fa-list-ul"></i></span>
+                    <span class="btn-inner--text d-none d-sm-inline-block">Listing</span>
+                  </button>
+                  <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow" aria-labelledby="btn-group-settings">
+                    <span class="dropdown-header">Tables</span>
+                    <a class="dropdown-item" href="listing-orders.html">Orders</a>
+                    <a class="dropdown-item" href="listing-projects.html">Projects</a>
+                    <span class="dropdown-header">Flex</span>
+                    <a class="dropdown-item" href="listing-users.html">Users</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="slice bg-section-secondary">
+      <div class="container">
+        <!-- Section title -->
+        <div class="actions-toolbar py-2 mb-4">
+          <div class="actions-search" id="actions-search">
+            <div class="input-group input-group-merge input-group-flush">
+              <div class="input-group-prepend">
+                <span class="input-group-text bg-transparent"><i class="far fa-search"></i></span>
+              </div>
+              <input type="text" class="form-control form-control-flush" placeholder="Type and hit enter ...">
+              <div class="input-group-append">
+                <a href="#" class="input-group-text bg-transparent" data-action="search-close" data-target="#actions-search"><i class="far fa-times"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="row justify-content-between align-items-center">
+            <div class="col">
+              <h5 class="mb-1">Advertisements</h5>
+              <p class="text-sm text-muted mb-0 d-none d-md-block">Manage and track advertisements.</p>
+            </div>
+            <div class="col text-right">
+            </div>
+          </div>
+        </div>
+        <!-- Orders table -->
+        <div class="table-responsive">
+          <table class="table table-cards align-items-center">
+            <thead> 
+              <tr>
+                <th scope="col">View Ad</th>
+                <th scope="col" class="sort">Name</th>
+                <th scope="col" class="sort">Clicks</th>
+                <th scope="col" class="sort">Website</th>
+                <th scope="col" class="sort">ID</th>
+                <th scope="col"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <% ads.forEach (ad => {%>
+                <tr>
+                    <th scope="row">
+                      <button type="button" class="btn btn-sm btn-secondary btn-icon rounded-pill">
+                        <span class="btn-inner--icon"><i class="far fa-download"></i></span>
+                        <span class="btn-inner--text">View Ad</span>
+                      </button>
+                    </th>
+                    <td class="order">
+                      <span class="h6 text-sm font-weight-bold mb-0"><%= ad.name %></span>
+                      <span class="d-block text-sm text-muted">more info here</span>
+                    </td>
+                    <td>
+                      <span class="client"><%= ad.clicks %></span>
+                    </td>
+                    <td>
+                      <span class="value text-sm mb-0"><%= ad.website %></span>
+                    </td>
+                    <td>
+                      <span class="taxes text-sm mb-0"><%= ad.id %></span>
+                    </td>
+                    <td>
+                      <!--<div class="d-flex align-items-center justify-content-end">
+                        <button type="button" class="btn btn-sm btn-soft-warning btn-icon rounded-pill">
+                          <span class="btn-inner--icon"><i class="far fa-plus"></i></span>
+                          <span class="btn-inner--text">Pay now</span>
+                        </button>
+                        <div class="actions ml-3">
+                          <a href="#" class="action-item mr-2" data-toggle="tooltip" title="Edit">
+                            <i class="far fa-pencil-alt"></i>
+                          </a>
+                          <a href="#" class="action-item mr-2" data-toggle="tooltip" title="Archive">
+                            <i class="far fa-archive"></i>
+                          </a>
+                          <div class="dropdown">
+                            <a href="#" class="action-item" role="button" data-toggle="dropdown" aria-haspopup="true" data-expanded="false">
+                              <i class="far fa-ellipsis-v"></i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right">
+                              <a href="#!" class="dropdown-item">
+                                Action
+                              </a>
+                              <a href="#!" class="dropdown-item">
+                                Another action
+                              </a>
+                              <a href="#!" class="dropdown-item">
+                                Something else here
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>-->
+                    </td>
+                  </tr>
+                  <tr class="table-divider"></tr>
+                <% }) %>
+            </tbody>
+          </table>
+        </div>
+        <!-- Load more -->
+        <div class="mt-4 text-center">
+          <a href="#" class="btn btn-sm btn-neutral rounded-pill shadow hover-translate-y-n3">Load more ...</a>
+        </div>
+      </div>
+    </section>
+  </div>
+  <footer class="footer p-0 footer-light bg-section-secondary" id="footer-main">
+    <div class="container">
+      <div class="py-4">
+        <div class="row align-items-md-center">
+          <div class="col-md-4 mb-4 mb-md-0">
+            <div class="d-flex align-items-center">
+              <p class="text-sm mb-0">&copy; Purpose. 2019 <a href="https://webpixels.io/" target="_blank">Webpixels</a>. All rights reserved.</p>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4 mb-4 mb-sm-0">
+            <ul class="nav justify-content-center">
+              <li class="nav-item">
+                <a class="nav-link" href="../utility/support.html">Support</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../utility/terms.html">Terms</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../utility/privacy.html">Privacy</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <ul class="nav justify-content-center justify-content-md-end mt-3 mt-md-0">
+              <li class="nav-item">
+                <a class="nav-link" href="https://dribbble.com/webpixels" target="_blank">
+                  <i class="fab fa-dribbble"></i>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="https://www.instagram.com/webpixelsofficial" target="_blank">
+                  <i class="fab fa-instagram"></i>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="https://github.com/webpixels" target="_blank">
+                  <i class="fab fa-github"></i>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="https://www.facebook.com/webpixels" target="_blank">
+                  <i class="fab fa-facebook"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <div class="customizer">
+    <a href="#modal-customizer" class="btn btn-warning btn-lg btn-icon-only rounded-circle text-white hover-scale-110 shadow-lg mr-3" data-toggle="modal">
+      <span class="btn-inner--icon"><i class="far fa-palette"></i></span>
+    </a>
+    <a href="../../docs/support.html" class="btn btn-lg btn-white btn-icon-only rounded-circle hover-scale-110 shadow-lg mr-3 d-none d-lg-inline-block">
+      <span class="btn-inner--icon"><i class="far fa-question"></i></span>
+    </a>
+    <a href="https://themes.getbootstrap.com/product/purpose-website-ui-kit/" target="_blank" class="btn btn-lg btn-white btn-icon-only rounded-circle hover-scale-110 shadow-lg d-none d-lg-inline-block">
+      <span class="btn-inner--icon"><i class="far fa-shopping-basket"></i></span>
+    </a>
+  </div>
+  <!-- Customizer modal -->
+  <div class="modal fade fixed-right" id="modal-customizer" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-vertical" role="document">
+      <form class="modal-content" id="form-customizer">
+        <div class="modal-body">
+          <!-- Close -->
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close" data-toggle="tooltip" data-placement="left" title="Close Customizer">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <div class="text-center mx-auto mt-4 mb-5" style="width: 80px;">
+            <img alt="Image placeholder" src="../../assets/img/icons/essential/detailed/Click.svg" class="svg-inject img-fluid">
+          </div>
+          <h5 class="text-center mb-2">Choose (your) Purpose</h5>
+          <p class="text-center mb-4">
+            Customize your preview experience by selecting skin colors and modes.
+          </p>
+          <hr class="mb-4">
+          <!-- Skin color -->
+          <h6 class="mb-1">Skin color</h6>
+          <p class="small text-muted mb-3">
+            Set a new theme color palette.
+          </p>
+          <div class="btn-group-toggle row mx-0 mb-5" data-toggle="buttons">
+            <label class="btn btn-sm btn-neutral active col mb-2">
+              <input type="radio" name="skin" value="default" checked>
+              Default
+            </label>
+            <label class="btn btn-sm btn-neutral col-6 mb-2 mr-0">
+              <input type="radio" name="skin" value="blue">
+              Blue
+            </label>
+            <!-- <label class="btn btn-sm btn-neutral col mb-2">
+                        <input type="radio" name="skin" value="blue">
+                        Blue
+                    </label>
+                    <label class="btn btn-sm btn-neutral col-6 mb-2 mr-0">
+                        <input type="radio" name="skin" value="red">
+                        Red
+                    </label> -->
+          </div>
+          <!-- Skin mode -->
+          <h6 class="mb-1">Skin mode</h6>
+          <p class="small text-muted mb-3">
+            Set the theme's mode: light or dark.
+          </p>
+          <div class="btn-group-toggle row mx-0 mb-4" data-toggle="buttons">
+            <label class="btn btn-sm btn-neutral active flex-fill mb-2 mr-2">
+              <input type="radio" name="mode" value="light" checked>
+              <i class="far fa-sun mr-2"></i> Light
+            </label>
+            <label class="btn btn-sm btn-neutral flex-fill mb-2 mr-2">
+              <input type="radio" name="mode" value="dark">
+              <i class="far fa-moon mr-2"></i> Dark
+            </label>
+          </div>
+        </div>
+        <div class="modal-footer border-0">
+          <button type="submit" class="btn btn-block btn-primary mt-auto">
+            Preview
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <!-- Core JS - includes jquery, bootstrap, popper, in-view and sticky-kit -->
+  <script src="/assets/js/purpose.core.js"></script>
+  <!-- Purpose JS -->
+  <script src="/assets/js/purpose.js"></script>
+</body>
+
+
+<!-- Mirrored from preview.webpixels.io/purpose-website-ui-kit-v2.0.0/pages/account/listing-orders.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 15 Mar 2019 20:07:28 GMT -->
+</html>
